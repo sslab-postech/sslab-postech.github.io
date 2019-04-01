@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>RESEARCH: System Software Lab., POSTECH</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="site-content">
+			<header class="site-header" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="index.html" class="branding">
+							<div class="logo-type">
+								<h1 class="site-title">System Software Lab.</h1>
+								<small class="site-description">POSTECH</small>
+							</div>
+						</a>
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="index.html">HOME</a></li>
+								<li class="menu-item"><a href="members.html">MEMBERS</a></li>
+								<li class="menu-item current-menu-item"><a href="research.html">RESEARCH</a></li>
+								<li class="menu-item"><a href="publications.html">PUBLICATIONS</a></li>
+								<li class="menu-item"><a href="projects.html">PROJECTS</a></li>
+								<li class="menu-item"><a href="contact.html">CONTACT</a></li>
+							</ul>
+						</nav>
+
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+			<div class="page-head" data-bg-color="#69acc7">
+				<div class="container">
+					<h2 class="page-title">RESEARCH</h2>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="boxed-icon">
+							<h3 id="1"><strong>1. Storage systems</strong></h3>
+							<h3><strong>RAID In SSD</strong></h3>
+							<p>Ensures the reliability of flash memory.</p>
+							<h4>Motivation</h4>
+							<p>Current NAND flash products ensure reliability by employing error-correcting codes (ECCs).</p>
+							<p>
+								<ul>
+									<li class="indentation">In recent years, multi-level cell (MLC) and triple-level cell (TLC) flash memories have been developed as effective solutions to reduce the cost of flash devices.</li>
+									<li class="indentation">Traditionally, single-level cell (SLC) flash memory uses single-bit ECC. However, MLC and TLC flash memories show a much higher bit-error rate (BER). Therefore, codes with strong error-correction capabilities, like BCH or RS codes, are used. These ECCs require a high hardware complexity and increase the read and write latencies.</li>
+									<li class="indentation">Another approach for reliability is adopt redundancy in storage level. Previous studies <a href="#r1">[1]</a><a href="#r2">[2]</a><a href="#r3">[3]</a><a href="#r4">[4]</a> have been tried to adapt Redundant Arrays of Inexpensive Disks (RAID) <a href="#r5">[5]</a> technique to flash memory.</li>
+									<li class="indentation">However, these studies did not consider the characteristics of flash memory, such as the characteristics of block/chip failures, the Hybrid FTL of SSD, and multi-channels.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Designing erasure codes and Hybrid-FTL in order to increase the reliability of flash memory without considerably sacrificing the performance of SSDs.</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">Flash-aware erasure codes</li>
+									<li class="indentation">RAID-aware Hybrid-FTL</li>
+								</ul>
+							</p>
+							<p><img src="images/raid-in-ssd.png" alt="" class="research-img"></p>
+
+							<h3><strong>Storage QoS</strong></h3>
+							<p>Ensure specific performance levels for applications that use the storage.</p>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">Distributed storage systems such as Ceph <a href="#r6">[6]</a> are widely used to store a huge amount of user data generated from applications.</li>
+									<li class="indentation">
+										Each application accessing a distributed storage system has different performance requirements <a href="r3">[3]</a>Remote Desktop: requires low latency.
+										<ul>
+											<li class="indentation">Virus Scan: requires high throughput</li>
+										</ul>
+									</li>
+									<li class="indentation">However, previous studies <a href="#r7">[7]</a><a href="#r8">[8]</a><a href="#r9">[9]</a><a href="#r10">[10]</a><a href="#r11">[11]</a> have limited support for a various performance requirements or do not support storage QoS in distributed storage systems</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Designing a storage QoS method to support clients with varying performance requirements in distributed storage systems while maximizing storage utilization</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">Feedback mechanism for I/O scheduling</li>
+									<li class="indentation">I/O scheduling method</li>
+									<li class="indentation">I/O request distribution protocol</li>
+								</ul>
+							</p>
+							<p><img src="images/storate-qos.png" alt="" class="research-img"> </p>
+						</div>
+
+						<div class="boxed-icon">
+							<h3 id="2"><strong>2. Virtualization</strong></h3>
+							<h3><strong>GPU Virtualization</strong></h3>
+							<p>Supporting Dual Operating Systems, Real-Time Operating System and Linux with (GP)GPU sharing.</p>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">Currently there is no GPU device driver in <strong>the RTOS</strong>, but the GPU is very important device in the embedded system, especially for time-critical job <a href="#r12">[12]</a>.</li>
+									<li class="indentation"><strong>Linux</strong> with GPU device driver is released by each embedded board manufacture, so the embedded kernel developer doesn’t have to port device driver.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Virtualization with GPU sharing model to support running RTOS and Linux simultaneously on a physical machine and GPU aid for computing in RTOS.</li>
+									<li class="indentation">
+										Device driver level virtualization (Para-virtualization)
+										<ul>
+											<li class="indentation">High performance</li>
+											<li class="indentation">Extensibility (General device sharing)</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">
+										Virtualization with GPU sharing (inter-VM)
+										<ul>
+											<li class="indentation">Data sharing</li>
+											<li class="indentation">Event notification</li>
+										</ul>
+									</li>
+									<li class="indentation">GPU Scheduling</li>
+								</ul>
+							</p>
+							<p><img src="images/gpu-virtualization.png" alt="" class="research-img"></p>
+						</div>
+
+						<div class="boxed-icon">
+							<h3 id="3"><strong>3. System Security</strong></h3>
+							<h3>Secure logging scheme based on TPM 2.0</h3>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">As the connected car environment spreads, the amount of data generated in the vehicle increases.</li>
+									<li class="indentation">Whether the network is on-line or off-line, data is generated in the secure state.</li>
+									<li class="indentation">The trusted server must be able to verify that the data generated by vehicle is correct.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Design secure logging scheme based on TPM 2.0 for in-vehicle data protection</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">Log verification mechanism</li>
+									<li class="indentation">Log attack scenario</li>
+									<li class="indentation">Software TPM</li>
+								</ul>
+							</p>
+							<p><img src="images/data-security-based-on-tpm1.png" alt="" class="research-img"></p>
+
+							<h3><strong>Software TPM for data security</strong></h3>
+							<h4>TPM Data Security</h4>
+							<p>
+								<ul>
+									<li class="indentation">Developing and leveraging Software Trusted Platform Module function to provide security functions</li>
+								</ul>
+							</p>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">
+										<ul>
+											TPM is a hardware function which supports security tasks.
+											<li class="indentation">Key generation, Encryption, Attestation, …</li>
+										</ul>
+									</li>
+									<li class="indentation">But, hardware TPM is not provided in various platforms.</li>
+									<li class="indentation">Also, hardware TPM is low-cost MCU so it causes low performances.</li>
+									<li class="indentation">
+										Solution is develop a software implementation of TPM.
+										<ul>
+											<li class="indentation">To make TPM functions adaptability with variety of platform</li>
+											<li class="indentation">Providing better performance for security tasks</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+							<h4>Method</h4>
+							<p>
+								<ul>
+									<li class="indentation">
+										Implement TPM 2.0 specifications functions on Software TPM.
+										<ul>
+											<li class="indentation">Trusted storage, trusted clock, secure entropy, …</li>
+										</ul>
+									</li>
+									<li class="indentation">
+										Protect their execution leveraging kernel isolation.
+										<ul>
+											<li class="indentation">Same as Nested kernel, SKEE, KENALI</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+							<h4>Expected Results</h4>
+							<p>
+								<ul>
+									<li class="indentation">Successfully deploy software TPM.</li>
+									<li class="indentation">Take advantages of software TPM to develop security applications.</li>
+								</ul>
+							</p>
+							<p><img src="images/data-security-based-on-tpm2.png" alt="" class="research-img"></p>
+
+							<h3><strong>IoT Security & Blockchain</strong></h3>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">Today, the Internet of Things(IoT) exists in every corner of our life and provides us with convenient and various. Every things can make relationship with each other, exchange data and create new data.</li>
+									<li class="indentation">But, at the same time, centralized cloud based IoT architecture present various problem such as security, scalability, single point of failure etc.</li>
+									<li class="indentation">As much as we can find IoT devices anywhere in our life, service provider using IoT devices need some secure and convenient mechanism to sell services.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Blockchain <a href="#r13">[13]</a> is distributed ledger system, it can maintain secure state without trusted third party. Inherently resistant to modification of the data, once recorded, the data in a block cannot be altered retroactively.</li>
+									<li class="indentation">Smart Contract is extended blockchain concept. It is programmable contract, so it can provide various services and make secure transaction with untrusted peer.</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">IoT device with blockchain and smart contract based services which provides various, secure and instant services.</li>
+								</ul>
+							</p>
+							<p><img src="images/iot-security-and-blockchain.png" alt="" class="research-img"></p>
+							
+							<h3><strong>Blockchain based User Authentication</strong></h3>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">User authentication should support its  reliability and usability. Research of applying blockchain on authentication is quite active nowadays. But current implementations are focused on public authentication system, meaning it does not support transfer of certificate. And it also has innate problem of privacy. So, we suggest authentication system using token which can support transfer, diverse attribute and pseudonymity.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Ethereum Blockhcain</li>
+									<li class="indentation">Smart Contract (Solidity)</li>
+									<li class="indentation">Mobile Application</li>
+								</ul>
+							</p>
+							<p><img src="images/injeungbeullokchein.png" alt="" class="research-img"></p>
+						</div>
+
+						<div class="boxed-icon">
+							<h3 id="4"><strong>4. References</strong></h3>
+							<p>
+								<span id="r1">[1]</span> Kim, Jaeho, et al. “Improving SSD reliability with RAID via elastic striping and anywhere parity.” Dependable Systems and Networks (DSN), 2013 43rd Annual IEEE/IFIP
+								International Conference on. IEEE, 2013.<br>
+								<span id="r2">[2]</span> Park, Heejin, et al. “Incremental redundancy to reduce data retention errors in flash-based SSDs.” Mass Storage Systems and Technologies (MSST), 2015 31st Symposium on.
+								IEEE, 2015.<br>
+								<span id="r3">[3]</span> Lee, Sehwan, et al. “A lifespan-aware reliability scheme for RAID-based flash storage.” Proceedings of the 2011 ACM Symposium on Applied Computing. ACM, 2011.<br>
+								<span id="r4">[4]</span> Im, Soojun, and Dongkun Shin. “Flash-aware RAID techniques for dependable and high-performance flash memory SSD.” IEEE Transactions on Computers 60.1 (2011): 80-92.<br>
+								<span id="r5">[5]</span> D. A. Patterson, G. Gibson, and R. H. Katz, A case for redundant arrays of inexpensive disks (RAID), Proc. of the 1988 ACM SIGMOD International Conference on
+								Management of Data, pp.109-116, 1988.<br>
+								<span id="r6">[6]</span> Weil, Sage A., et al. Ceph: A scalable, high-performance distributed file system. In Proceedings of the 7th symposium on Operating systems design and implementation.
+								USENIX Association, 2006.<br>
+								<span id="r7">[7]</span> Gulati, Ajay, Arif Merchant, and Peter J. Varman. mClock: handling throughput variability for hypervisor IO scheduling. In Proceedings of the 9th USENIX conference on
+								Operating systems design and implementation. USENIX Association, 2010.<br>
+								<span id="r8">[8]</span> Park, Stan, and Kai Shen. FIOS: a fair, efficient flash I/O scheduler. FAST. 2012.<br>
+								<span id="r9">[9]</span> Shen, Kai, and Stan Park. FlashFQ: A Fair Queueing I/O Scheduler for Flash-Based SSDs. USENIX Annual Technical Conference. 2013.<br>
+								<span id="r10">[10]</span> Park, Hyunchan, et al. Storage SLA guarantee with novel SSD I/O scheduler in virtualized data centers. IEEE Transactions on Parallel and Distributed Systems 27.8: 2422-2434,
+								2016<br>
+								<span id="r11">[11]</span> Gulati, Ajay, Irfan Ahmad, and Carl A. Waldspurger. PARDA: Proportional Allocation of Resources for Distributed Storage Access. FAST. 2009.<br>
+								<span id="r12">[12]</span> Glenn A. Elliott et al. Real-World Constraints of GPUs in Real-Time Systems. 2011 IEEE 17th International Conference on Embeed and Real-Time Computing Systems and
+								Applications<br>
+								<span id="r13">[13]</span> Konstantinos and Michael (201“) Blockchains and Smart Contracts for the Internet of Things in IEEE ACCESS<br>
+							</p>
+						</div>
+
+						<div class="boxed-icon">
+							<h3 id="5"><strong>5. Previous Research</strong></h3>
+							<p>Previous research description page can be found at the following links</p>
+							<p>
+								<ul>
+									<li class="indentation"><a href="daas-web-client.html">DaaS Web Client</a></li>
+									<li class="indentation"><a href="data-firewall-df.html">Data Firewall</a></li>
+									<li class="indentation"><a href="gpgpu-offloading.html">GPGPU offloading</a></li>
+									<li class="indentation"><a href="mobile-cloud-security-framework.html">Mobile Cloud Security Framework</a></li>
+									<li class="indentation"><a href="gpu-virtualization.html">GPU Virtualization</a></li>
+									<li class="indentation"><a href="poscfs.html">PosCFS+</a></li>
+									<li class="indentation"><a href="#">Security Enhanced Software TPM (SES-TPM)</a></li>
+									<li class="indentation"><a href="u-pc-architecture.html">u-PC architecture</a></li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</main> <!-- .main-content -->
+			<footer class="site-footer" data-bg-color="#edf2f4">
+				<div class="container">
+					<div class="row">
+						<div class="widget">
+							<strong>System Software Lab</strong>
+							<address>Room 423 and 438, PIRL, POSTECH, 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, Republic of Korea</address>
+						</div>
+					<p class="colophon">copyright 2019 System Software Lab. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>
+				</div> <!-- .container -->
+			</footer>
+		</div>
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>

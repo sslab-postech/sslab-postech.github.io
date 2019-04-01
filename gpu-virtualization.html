@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>RESEARCH: System Software Lab., POSTECH</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="site-content">
+			<header class="site-header" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="index.html" class="branding">
+							<div class="logo-type">
+								<h1 class="site-title">System Software Lab.</h1>
+								<small class="site-description">POSTECH</small>
+							</div>
+						</a>
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="index.html">HOME</a></li>
+								<li class="menu-item"><a href="members.html">MEMBERS</a></li>
+								<li class="menu-item"><a href="research.html">RESEARCH</a></li>
+								<li class="menu-item"><a href="publications.html">PUBLICATIONS</a></li>
+								<li class="menu-item"><a href="projects.html">PROJECTS</a></li>
+								<li class="menu-item"><a href="contact.html">CONTACT</a></li>
+							</ul>
+						</nav>
+
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+			<div class="page-head" data-bg-color="#69acc7">
+				<div class="container">
+					<h2 class="page-title">RESEARCH</h2>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="boxed-icon">
+                            <h3><strong>GPU Virtualization</strong></h3>
+                            <p>Bring Your Own Device (BYOD) will be popular in the business world, so mobile virtualization is also hot issue to isolate business/private environments. On the other hand, performance gap between GPU and CPU in the mobile environment will grow, so guest will have several limitations without GPU from perspective of performance.</p>
+                            <p>It is a new GPU virtualization solution on KVM/ARM platform based on device file boundary, and guest/KVM host communicate each other by hypervall (hvc). In this project, we support jb-mr1 android graphics systems such as ion, fb, vsync.</p>
+                            <p>Our GPU resource sharing model is foreground/background. In this case, we can stop layer composition of background surfaceflinger. User can use input trigger to change foreground/background state.</p>
+                            <p>
+                                <img src="images/gpu_virt.jpg" alt="" class="research-img">
+                            </p>               
+                            <h4>Demo</h4>
+                            <p><a href="https://www.youtube.com/watch?v=az8tjlY_ik4&feature=youtu.be">Demo Video</a></p>
+                            
+                            <h4>publications</h4>
+                            <p>
+                                <ul>
+                                    <li class="indentation">박병수, 이운성, 박세진, 박찬익, 김우성, 조혜진, 이규은.“안드로이드 호스트 기반 KVM/ARM 가상화 환경에서의 GPU 디바이스 구동기법” 한국 컴퓨터 종합 학술 대회 (Korea Computer Congress) 2014</li>
+                                </ul>
+                            </p>
+						</div>
+					</div>
+				</div>
+			</main> <!-- .main-content -->
+			<footer class="site-footer" data-bg-color="#edf2f4">
+				<div class="container">
+					<div class="row">
+						<div class="widget">
+							<strong>System Software Lab</strong>
+							<address>Room 423 and 438, PIRL, POSTECH, 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, Republic of Korea</address>
+						</div>
+					<p class="colophon">copyright 2019 System Software Lab. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>
+				</div> <!-- .container -->
+			</footer>
+		</div>
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>

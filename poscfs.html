@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>RESEARCH: System Software Lab., POSTECH</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="site-content">
+			<header class="site-header" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="index.html" class="branding">
+							<div class="logo-type">
+								<h1 class="site-title">System Software Lab.</h1>
+								<small class="site-description">POSTECH</small>
+							</div>
+						</a>
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="index.html">HOME</a></li>
+								<li class="menu-item"><a href="members.html">MEMBERS</a></li>
+								<li class="menu-item"><a href="research.html">RESEARCH</a></li>
+								<li class="menu-item"><a href="publications.html">PUBLICATIONS</a></li>
+								<li class="menu-item"><a href="projects.html">PROJECTS</a></li>
+								<li class="menu-item"><a href="contact.html">CONTACT</a></li>
+							</ul>
+						</nav>
+
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+			<div class="page-head" data-bg-color="#69acc7">
+				<div class="container">
+					<h2 class="page-title">RESEARCH</h2>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="boxed-icon">
+                            <h3><strong>PosCFS+</strong></h3>
+                            <p>PosCFS+ is a distributed file system integrating personal devices.</p>
+                            <p>In the research, a storage virtualization technique on file system layer had been proposed in order to provide integrated data management on personal mobile devices. PosCFS+ is a self-configurable peer-to-peer file system in which all the storages of mobile devices in PAN can be automatically and dynamically integrated as a virtual storage space by Universal Plug-and-Play (UPnP) protocol.</p>
+                            <p>It also provides a dynamic namespace management based on file metadata. (also known as semantic file addressing) For the purpose, all the files on the storage are tagged with semantic metadata extracted on their creation time, or with some other information explicitly annotated by either users or applications. The namespace of the virtual storage, called virtual directory trees, are dynamically provided for each client-side based on the metadata and pre-defined rules for the namespace management.</p>
+                            <p>For interoperability, WebDAV, a HTTP extension for file I/Os, is used for basic file I/O operations and other extended file system operations are defined as UPnP actions.</p>
+                            <p>
+                                <img src="images/poscfs.jpg" alt="" class="research-img">
+                            </p>               
+                            <h4>Publications</h4>
+                            <p>
+                                <ul>
+                                    <li class="indentation">An Agent Framework for CE Devices to Support Storage Virtualization on Device Ensembles. Woojoong Lee, Young-Ki Hong, and Chanik Park. 6th Annual IEEE Consumer Communications & Networking Conference (CCNC 09) 2009.</li>
+                                    <li class="indentation">An Event Notification Framework for PosCFS+ Distributed File Service in Personal Area Network. Woojoong Lee and Chanik Park. International Conference On Next-Generation Computing 2007(pp.217-221).</li>
+                                    <li class="indentation">PosCFS+: A Self-Managed File Service in Personal Area Network. Woojoong Lee, Shine Kim, and Chanik Park. ETRI Journal, vol. 29, no. 3, June 2007, pp. 281-291.</li>
+                                    <li class="indentation">PosCFS: An Advanced File Management Technique for the Wearable Computing Environment. Woojoong Lee, Shine Kim, Jonghwa Shin and Chanik Park. Lecture Notes in Computer Science 4096, pp.965-975 – Proc. EUC’06, IFIP, 2006.</li>
+                                </ul>
+                            </p>
+                            
+                            <h4>Patents</h4>
+                            <p>
+                                <ul>
+                                    <li class="indentation">PosCFS+: A CONTEXT-AWARE AND SELF-MANAGED FILE SERVICE IN PERSONAL AREA NETWORK. Chanik Park, Woojoong Lee and Shin Kim. U.S. Patent Application, 11/869223, October 10, 2006.</li>
+                                    <li class="indentation">유비쿼터스 환경에서 데이터 통합관리를 위한 분산 파일서비스 방법 및 시스템. 박찬익,이우중,김신. Published in Korea, 10-0932642, 20091210.</li>
+                                </ul>
+                            </p>
+						</div>
+					</div>
+				</div>
+			</main> <!-- .main-content -->
+			<footer class="site-footer" data-bg-color="#edf2f4">
+				<div class="container">
+					<div class="row">
+						<div class="widget">
+							<strong>System Software Lab</strong>
+							<address>Room 423 and 438, PIRL, POSTECH, 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, Republic of Korea</address>
+						</div>
+					<p class="colophon">copyright 2019 System Software Lab. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>
+				</div> <!-- .container -->
+			</footer>
+		</div>
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
