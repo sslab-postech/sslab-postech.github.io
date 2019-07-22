@@ -1507,6 +1507,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   padding-left: 70px;
+  height: 170px;
   position: relative;
 }
 .alumni:before {
@@ -1526,7 +1527,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-weight: 500;
     color: #69acc7;
     margin-bottom: 0px;
-    height: 50px;
+    height: 70px;
   }
 .checked-box {
   border: 1px solid #edf2f4;
