@@ -46,109 +46,74 @@
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="boxed-icon">
-							<h3 id="1"><strong>1. Storage systems</strong></h3>
-							<h3><strong>RAID In SSD</strong></h3>
-							<p>Ensures the reliability of flash memory.</p>
+							<h3 id="1"><strong>1. Blockchain Technologies</strong></h3>
+							<h3><strong>IoT and Blockchain</strong></h3>
 							<h4>Motivation</h4>
-							<p>Current NAND flash products ensure reliability by employing error-correcting codes (ECCs).</p>
 							<p>
 								<ul>
-									<li class="indentation">In recent years, multi-level cell (MLC) and triple-level cell (TLC) flash memories have been developed as effective solutions to reduce the cost of flash devices.</li>
-									<li class="indentation">Traditionally, single-level cell (SLC) flash memory uses single-bit ECC. However, MLC and TLC flash memories show a much higher bit-error rate (BER). Therefore, codes with strong error-correction capabilities, like BCH or RS codes, are used. These ECCs require a high hardware complexity and increase the read and write latencies.</li>
-									<li class="indentation">Another approach for reliability is adopt redundancy in storage level. Previous studies <a href="#r1">[1]</a><a href="#r2">[2]</a><a href="#r3">[3]</a><a href="#r4">[4]</a> have been tried to adapt Redundant Arrays of Inexpensive Disks (RAID) <a href="#r5">[5]</a> technique to flash memory.</li>
-									<li class="indentation">However, these studies did not consider the characteristics of flash memory, such as the characteristics of block/chip failures, the Hybrid FTL of SSD, and multi-channels.</li>
+									<li class="indentation">Today, the Internet of Things(IoT) exists in every corner of our life and provides us with convenient and various. Every things can make relationship with each other, exchange data and create new data.</li>
+									<li class="indentation">But, at the same time, centralized cloud based IoT architecture present various problem such as security, scalability, single point of failure etc.</li>
+									<li class="indentation">As much as we can find IoT devices anywhere in our life, service provider using IoT devices need some secure and convenient mechanism to sell services.</li>
 								</ul>
 							</p>
 							<h4>Research subject</h4>
 							<p>
 								<ul>
-									<li class="indentation">Designing erasure codes and Hybrid-FTL in order to increase the reliability of flash memory without considerably sacrificing the performance of SSDs.</li>
+									<li class="indentation">Blockchain <a href="#r13">[13]</a> is distributed ledger system, it can maintain secure state without trusted third party. Inherently resistant to modification of the data, once recorded, the data in a block cannot be altered retroactively.</li>
+									<li class="indentation">Smart Contract is extended blockchain concept. It is programmable contract, so it can provide various services and make secure transaction with untrusted peer.</li>
 								</ul>
 							</p>
 							<h4>Research objects</h4>
 							<p>
 								<ul>
-									<li class="indentation">Flash-aware erasure codes</li>
-									<li class="indentation">RAID-aware Hybrid-FTL</li>
+									<li class="indentation">IoT device with blockchain and smart contract based services which provides various, secure and instant services.</li>
 								</ul>
 							</p>
-							<p><img src="images/raid-in-ssd.png" alt="" class="research-img"></p>
+							<p><img src="images/iot-security-and-blockchain.png" alt="" class="research-img"></p>
+							
+							<h3><strong>Blockchain based User Authentication</strong></h3>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">User authentication should support its reliability and usability. Research of applying blockchain on authentication is quite active nowadays. But current implementations are focused on public authentication system, meaning it does not support transfer of certificate. And it also has innate problem of privacy. So, we suggest authentication system using token which can support transfer, diverse attribute and pseudonymity.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Ethereum Blockhcain</li>
+									<li class="indentation">Smart Contract (Solidity)</li>
+									<li class="indentation">Mobile Application</li>
+								</ul>
+							</p>
+							<p><img src="images/injeungbeullokchein.png" alt="" class="research-img"></p>
 
-							<h3><strong>Storage QoS</strong></h3>
-							<p>Ensure specific performance levels for applications that use the storage.</p>
+							<h3><strong>Auditing Blockchain Platform</strong></h3>
 							<h4>Motivation</h4>
 							<p>
 								<ul>
-									<li class="indentation">Distributed storage systems such as Ceph <a href="#r6">[6]</a> are widely used to store a huge amount of user data generated from applications.</li>
-									<li class="indentation">
-										Each application accessing a distributed storage system has different performance requirements <a href="r3">[3]</a>Remote Desktop: requires low latency.
-										<ul>
-											<li class="indentation">Virus Scan: requires high throughput</li>
-										</ul>
-									</li>
-									<li class="indentation">However, previous studies <a href="#r7">[7]</a><a href="#r8">[8]</a><a href="#r9">[9]</a><a href="#r10">[10]</a><a href="#r11">[11]</a> have limited support for a various performance requirements or do not support storage QoS in distributed storage systems</li>
+									<li class="indentation">As Blockchain-as-a-Service (BaaS) has witnessed a growing interest in enterprises, many BaaS providers have emerged. However, current BaaS providers can pose a potential security threat in the context of a centralized service provider and clients that depend on the provider. </li>
+								</ul>
+							</p>
+							<h4>Research objective</h4>
+							<p>
+								<ul>
+									<li class="indentation">Improving the reliability of BaaS by collaborative auditing between clients</li>
 								</ul>
 							</p>
 							<h4>Research subject</h4>
 							<p>
 								<ul>
-									<li class="indentation">Designing a storage QoS method to support clients with varying performance requirements in distributed storage systems while maximizing storage utilization</li>
+									<li class="indentation">The research covers consensus and fault detection mechanisms in distributed systems. Specifically, we study possible faulty behaviors by a malicious BaaS provider and develop a system that can tolerate those by collaborative auditing between clients.</li>
 								</ul>
 							</p>
-							<h4>Research objects</h4>
-							<p>
-								<ul>
-									<li class="indentation">Feedback mechanism for I/O scheduling</li>
-									<li class="indentation">I/O scheduling method</li>
-									<li class="indentation">I/O request distribution protocol</li>
-								</ul>
-							</p>
-							<p><img src="images/storate-qos.png" alt="" class="research-img"> </p>
+							<p><img src="images/auditing-blockchain-platform.png" alt="" class="research-img"></p>
 						</div>
 
-						<div class="boxed-icon">
-							<h3 id="2"><strong>2. Virtualization</strong></h3>
-							<h3><strong>GPU Virtualization</strong></h3>
-							<p>Supporting Dual Operating Systems, Real-Time Operating System and Linux with (GP)GPU sharing.</p>
-							<h4>Motivation</h4>
-							<p>
-								<ul>
-									<li class="indentation">Currently there is no GPU device driver in <strong>the RTOS</strong>, but the GPU is very important device in the embedded system, especially for time-critical job <a href="#r12">[12]</a>.</li>
-									<li class="indentation"><strong>Linux</strong> with GPU device driver is released by each embedded board manufacture, so the embedded kernel developer doesn’t have to port device driver.</li>
-								</ul>
-							</p>
-							<h4>Research subject</h4>
-							<p>
-								<ul>
-									<li class="indentation">Virtualization with GPU sharing model to support running RTOS and Linux simultaneously on a physical machine and GPU aid for computing in RTOS.</li>
-									<li class="indentation">
-										Device driver level virtualization (Para-virtualization)
-										<ul>
-											<li class="indentation">High performance</li>
-											<li class="indentation">Extensibility (General device sharing)</li>
-										</ul>
-									</li>
-								</ul>
-							</p>
-							<h4>Research objects</h4>
-							<p>
-								<ul>
-									<li class="indentation">
-										Virtualization with GPU sharing (inter-VM)
-										<ul>
-											<li class="indentation">Data sharing</li>
-											<li class="indentation">Event notification</li>
-										</ul>
-									</li>
-									<li class="indentation">GPU Scheduling</li>
-								</ul>
-							</p>
-							<p><img src="images/gpu-virtualization.png" alt="" class="research-img"></p>
-						</div>
 
 						<div class="boxed-icon">
-							<h3 id="3"><strong>3. System Security</strong></h3>
-							<h3>Secure logging scheme based on TPM 2.0</h3>
+							<h3 id="2"><strong>2. System Security</strong></h3>
+							<h3><strong>Secure logging scheme based on TPM 2.0</strong></h3>
 							<h4>Motivation</h4>
 							<p>
 								<ul>
@@ -225,48 +190,110 @@
 								</ul>
 							</p>
 							<p><img src="images/data-security-based-on-tpm2.png" alt="" class="research-img"></p>
+						</div>
 
-							<h3><strong>IoT Security & Blockchain</strong></h3>
+
+						<div class="boxed-icon">
+							<h3 id="3"><strong>3. Storage system</strong></h3>
+							<h3><strong>RAID In SSD</strong></h3>
+							<p>Ensures the reliability of flash memory.</p>
 							<h4>Motivation</h4>
+							<p>Current NAND flash products ensure reliability by employing error-correcting codes (ECCs).</p>
 							<p>
 								<ul>
-									<li class="indentation">Today, the Internet of Things(IoT) exists in every corner of our life and provides us with convenient and various. Every things can make relationship with each other, exchange data and create new data.</li>
-									<li class="indentation">But, at the same time, centralized cloud based IoT architecture present various problem such as security, scalability, single point of failure etc.</li>
-									<li class="indentation">As much as we can find IoT devices anywhere in our life, service provider using IoT devices need some secure and convenient mechanism to sell services.</li>
+									<li class="indentation">In recent years, multi-level cell (MLC) and triple-level cell (TLC) flash memories have been developed as effective solutions to reduce the cost of flash devices.</li>
+									<li class="indentation">Traditionally, single-level cell (SLC) flash memory uses single-bit ECC. However, MLC and TLC flash memories show a much higher bit-error rate (BER). Therefore, codes with strong error-correction capabilities, like BCH or RS codes, are used. These ECCs require a high hardware complexity and increase the read and write latencies.</li>
+									<li class="indentation">Another approach for reliability is adopt redundancy in storage level. Previous studies <a href="#r1">[1]</a><a href="#r2">[2]</a><a href="#r3">[3]</a><a href="#r4">[4]</a> have been tried to adapt Redundant Arrays of Inexpensive Disks (RAID) <a href="#r5">[5]</a> technique to flash memory.</li>
+									<li class="indentation">However, these studies did not consider the characteristics of flash memory, such as the characteristics of block/chip failures, the Hybrid FTL of SSD, and multi-channels.</li>
 								</ul>
 							</p>
 							<h4>Research subject</h4>
 							<p>
 								<ul>
-									<li class="indentation">Blockchain <a href="#r13">[13]</a> is distributed ledger system, it can maintain secure state without trusted third party. Inherently resistant to modification of the data, once recorded, the data in a block cannot be altered retroactively.</li>
-									<li class="indentation">Smart Contract is extended blockchain concept. It is programmable contract, so it can provide various services and make secure transaction with untrusted peer.</li>
+									<li class="indentation">Designing erasure codes and Hybrid-FTL in order to increase the reliability of flash memory without considerably sacrificing the performance of SSDs.</li>
 								</ul>
 							</p>
 							<h4>Research objects</h4>
 							<p>
 								<ul>
-									<li class="indentation">IoT device with blockchain and smart contract based services which provides various, secure and instant services.</li>
+									<li class="indentation">Flash-aware erasure codes</li>
+									<li class="indentation">RAID-aware Hybrid-FTL</li>
 								</ul>
 							</p>
-							<p><img src="images/iot-security-and-blockchain.png" alt="" class="research-img"></p>
-							
-							<h3><strong>Blockchain based User Authentication</strong></h3>
+							<p><img src="images/raid-in-ssd.png" alt="" class="research-img"></p>
+
+							<h3><strong>Storage QoS</strong></h3>
+							<p>Ensure specific performance levels for applications that use the storage.</p>
 							<h4>Motivation</h4>
 							<p>
 								<ul>
-									<li class="indentation">User authentication should support its  reliability and usability. Research of applying blockchain on authentication is quite active nowadays. But current implementations are focused on public authentication system, meaning it does not support transfer of certificate. And it also has innate problem of privacy. So, we suggest authentication system using token which can support transfer, diverse attribute and pseudonymity.</li>
+									<li class="indentation">Distributed storage systems such as Ceph <a href="#r6">[6]</a> are widely used to store a huge amount of user data generated from applications.</li>
+									<li class="indentation">
+										Each application accessing a distributed storage system has different performance requirements <a href="r3">[3]</a>Remote Desktop: requires low latency.
+										<ul>
+											<li class="indentation">Virus Scan: requires high throughput</li>
+										</ul>
+									</li>
+									<li class="indentation">However, previous studies <a href="#r7">[7]</a><a href="#r8">[8]</a><a href="#r9">[9]</a><a href="#r10">[10]</a><a href="#r11">[11]</a> have limited support for a various performance requirements or do not support storage QoS in distributed storage systems</li>
 								</ul>
 							</p>
 							<h4>Research subject</h4>
 							<p>
 								<ul>
-									<li class="indentation">Ethereum Blockhcain</li>
-									<li class="indentation">Smart Contract (Solidity)</li>
-									<li class="indentation">Mobile Application</li>
+									<li class="indentation">Designing a storage QoS method to support clients with varying performance requirements in distributed storage systems while maximizing storage utilization</li>
 								</ul>
 							</p>
-							<p><img src="images/injeungbeullokchein.png" alt="" class="research-img"></p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">Feedback mechanism for I/O scheduling</li>
+									<li class="indentation">I/O scheduling method</li>
+									<li class="indentation">I/O request distribution protocol</li>
+								</ul>
+							</p>
+							<p><img src="images/storate-qos.png" alt="" class="research-img"> </p>
 						</div>
+
+						<div class="boxed-icon">
+							<h3 id="4"><strong>4. Virtualization</strong></h3>
+							<h3><strong>GPU Virtualization</strong></h3>
+							<p>Supporting Dual Operating Systems, Real-Time Operating System and Linux with (GP)GPU sharing.</p>
+							<h4>Motivation</h4>
+							<p>
+								<ul>
+									<li class="indentation">Currently there is no GPU device driver in <strong>the RTOS</strong>, but the GPU is very important device in the embedded system, especially for time-critical job <a href="#r12">[12]</a>.</li>
+									<li class="indentation"><strong>Linux</strong> with GPU device driver is released by each embedded board manufacture, so the embedded kernel developer doesn’t have to port device driver.</li>
+								</ul>
+							</p>
+							<h4>Research subject</h4>
+							<p>
+								<ul>
+									<li class="indentation">Virtualization with GPU sharing model to support running RTOS and Linux simultaneously on a physical machine and GPU aid for computing in RTOS.</li>
+									<li class="indentation">
+										Device driver level virtualization (Para-virtualization)
+										<ul>
+											<li class="indentation">High performance</li>
+											<li class="indentation">Extensibility (General device sharing)</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+							<h4>Research objects</h4>
+							<p>
+								<ul>
+									<li class="indentation">
+										Virtualization with GPU sharing (inter-VM)
+										<ul>
+											<li class="indentation">Data sharing</li>
+											<li class="indentation">Event notification</li>
+										</ul>
+									</li>
+									<li class="indentation">GPU Scheduling</li>
+								</ul>
+							</p>
+							<p><img src="images/gpu-virtualization.png" alt="" class="research-img"></p>
+						</div>
+
 
 						<div class="boxed-icon">
 							<h3 id="4"><strong>4. References</strong></h3>
@@ -293,7 +320,8 @@
 								<span id="r13">[13]</span> Konstantinos and Michael (201“) Blockchains and Smart Contracts for the Internet of Things in IEEE ACCESS<br>
 							</p>
 						</div>
-
+				
+						
 						<div class="boxed-icon">
 							<h3 id="5"><strong>5. Previous Research</strong></h3>
 							<p>Previous research description page can be found at the following links</p>
