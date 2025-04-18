@@ -1730,7 +1730,9 @@ figure {
  * Footer Styles
  */
 .site-footer {
-  padding: 50px 0; }
+  position: relative;
+  padding: 50px 0; 
+}
 
 .footer-logo {
   position: absolute;
