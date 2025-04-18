@@ -1732,6 +1732,18 @@ figure {
 .site-footer {
   padding: 50px 0; }
 
+.footer-logo {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+}
+
 .widget {
   margin-bottom: 30px; }
   .widget .widget-title {
