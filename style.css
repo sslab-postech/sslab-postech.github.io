@@ -1749,7 +1749,7 @@ figure {
 
 .footer-logo {
   position: relative;
-  bottom: 0px;
+  bottom: -40px;
   right: -950px;
   z-index: 1000;
 }
