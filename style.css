@@ -1759,6 +1759,23 @@ figure {
   height: auto;
 }
 
+.bottom-right-link {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #b6b3b2;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.bottom-right-link:hover {
+  background-color: #dbe9ff;
+}
+
+
 .widget {
   margin-bottom: 30px; }
   .widget .widget-title {
