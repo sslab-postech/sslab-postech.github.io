@@ -1133,8 +1133,8 @@ form input[type="submit"], form button, form input[type="reset"] {
 
 .header-logo {
   position: relative;
-  top: 20px;
-  left: 100px;
+  top: 0px;
+  left: 250px;
   width: 200px;
   z-index: 100;
 }
@@ -1749,8 +1749,8 @@ figure {
 
 .footer-logo {
   position: relative;
-  bottom: 10px;
-  left: 10px;
+  bottom: 50px;
+  right: 0px;
   z-index: 1000;
 }
 
@@ -1762,7 +1762,7 @@ figure {
 .bottom-right-link {
   position: relative;
   bottom: 10px;
-  right: 10px;
+  right: 0px;
   color: #b6b3b2;
   padding: 8px 12px;
   border-radius: 5px;
