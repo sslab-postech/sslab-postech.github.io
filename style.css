@@ -1131,6 +1131,19 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 100%;
     left: 0; }
 
+.header-logo {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  width: 200px;
+  z-index: 100;
+}
+
+.header-logo img {
+  width: 100%;
+  height: auto;
+}
+
 .header-bar {
   *zoom: 1;
   background: white;
@@ -1745,6 +1758,23 @@ figure {
   width: 200px;
   height: auto;
 }
+
+.bottom-right-link {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #b6b3b2;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.bottom-right-link:hover {
+  background-color: #dbe9ff;
+}
+
 
 .widget {
   margin-bottom: 30px; }
