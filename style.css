@@ -1132,7 +1132,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     left: 0; }
 
 .header-logo {
-  position: absolute;
+  position: relative;
   top: 10px;
   left: 300px;
   width: 200px;
