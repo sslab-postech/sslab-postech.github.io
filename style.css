@@ -1132,15 +1132,15 @@ form input[type="submit"], form button, form input[type="reset"] {
     left: 0; }
 
 .header-logo {
-  position: fixed;
+  position: relative;
   top: 20px;
-  left: 15%;
+  left: 30%;
   width: 200px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .header-logo img {
-  width: 8vw;
+  width: 100%;
   height: auto;
 }
 
