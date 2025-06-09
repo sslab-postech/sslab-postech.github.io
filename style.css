@@ -1821,3 +1821,8 @@ figure {
     border-bottom: 1px solid #edf2f4; }
     .arrow-list.has-border li:last-child {
       border-bottom: none; }
+
+.colophon,
+.colophon * {
+  color: white !important;
+}
