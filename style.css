@@ -311,7 +311,6 @@ form input[type="submit"], form button, form input[type="reset"] {
     height: 0; }
 
 .row {
-  color: white;
   margin-left: -15px;
   margin-right: -15px;
   *zoom: 1; }
